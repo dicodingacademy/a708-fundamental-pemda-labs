@@ -18,7 +18,6 @@ def main():
             print(f"{key}. {name}")
         print("==========================")
 
-        print("Masukkan selain angka di atas jika ingin keluar program!")
         choice = input("PILIH OPERASI => Masukkan Pilihan Anda: ")
         if choice not in operations.keys():
             sys.exit("Keluar Program!")
@@ -29,6 +28,7 @@ def main():
             operation_name, function_name = operations[choice]
             result = function_name(numbers)
             print(f"Hasil: {result}")
+            break
         except ValueError as ve:
             print(f"Terjadi kesalahan ValueError: {ve}")
             break
